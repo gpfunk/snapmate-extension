@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "SnapMate",
+  "version": "1.0",
+  "action": {
+    "default_title": "SnapMate",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://localhost/*",
+      "http://127.0.0.1/*",
+      "https://zoom-713.pages.dev/*",
+      "https://snapmate.io/*"
+    ]
+  },
+  "host_permissions": [
+    "https://zoom-713.pages.dev/",
+    "https://snapmate.io/*"
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "js": ["dist/stripe.js"],
+    "css" : ["popup.css"],
+    "matches": [
+      "https://dashboard.stripe.com/*"
+    ]
+  }]
+}

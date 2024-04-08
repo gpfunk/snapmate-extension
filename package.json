@@ -1,0 +1,18 @@
+{
+  "name": "snapmate-extension",
+  "type": "module",
+  "scripts": {
+    "stripe": "bun config:local && bun build --watch src/stripe.js --outfile dist/stripe.js",
+    "config:local": "cp src/config.local.json src/config.json",
+    "config:prod": "cp src/config.prod.json src/config.json"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.6"
+  }
+}
