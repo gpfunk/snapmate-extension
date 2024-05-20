@@ -1,6 +1,6 @@
 // src/config.json
 var config_default = {
-  app_url: "http://127.0.0.1:8787"
+  app_url: "https://app.snapmate.io"
 };
 
 // node_modules/nanoid/url-alphabet/index.js
